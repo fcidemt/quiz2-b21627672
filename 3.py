@@ -30,11 +30,11 @@ for j in setB:
 
 union = setA + differenceB_A
 
-print('Set A:', setA)
-print('Set B:', setB)
-print('Intersection of A and B:', intersection)
-print('Union of A and B:', union)
-print('Difference of A and B:', differenceA_B)
+print('Set A: ' + str(setA))
+print('Set B: ' + str(setB))
+print('Intersection of A and B: ' + str(intersection))
+print('Union of A and B: ' + str(union))
+print('Difference of A and B: ' +  str(differenceA_B))
 
 
 
