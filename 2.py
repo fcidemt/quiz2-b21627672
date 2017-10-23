@@ -27,15 +27,15 @@ for i in L:
         pass
 
 total = 0
-for i in L:
-    i = int(i)
-    if i > 0:
-        total = total + i
+for j in L:
+    j = int(j)
+    if j > 0:
+        total += j
     else:
         pass
 
-print('Even Numbers:', E)
-print('Sum of Even Numbers:', sum(E))
+print('Even Numbers: ' + "{}".format(E))
+print('Sum of Even Numbers: ' + "{}".format(sum(E)))
 print('Even Number Rate: ' + '{0:.3f}'.format(sum(E) / total))
 
 
