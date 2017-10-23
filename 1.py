@@ -21,7 +21,8 @@ if discriminant > 0:
     print("There are two solutions")
     root1 = (-b + delta) / 2 * a
     root2 = (-b - delta) / 2 * a
-    print('Solution(s): ' + '{0:.2f}'.format(root1), + ' {0:.2f}'.format(root2)
+    print('Solutions(s): ' + '{0:.2f}'.format(root1), end=" ")
+    print('{0:.2f}'.format(root2))
 
 elif discriminant == 0:
     print("There is one solution")
@@ -30,5 +31,5 @@ elif discriminant == 0:
 
 else:
     print("The solution is not real but complex")
-
+  
 # End of the file
