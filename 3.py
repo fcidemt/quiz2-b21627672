@@ -10,11 +10,32 @@
 
 # Write your code here
 
-print('Set A: ')                              # prints every element of set A
-print('Set B: ')                              # prints every element of set B
-print('Intersection of A and B: ')            # print every element of intersection set of sets A and B
-print('Union of A and B: ')                   # print every element of union set of sets A and B
-print('Difference of A and B: ')              # print every element of difference set of sets A and B
+import sys
+
+setA = sys.argv[1].split(",")
+setB = sys.argv[2].split(",")
+intersection = []
+differenceA_B = []
+differenceB_A = []
+
+for i in setA:
+    if i in setB:
+        intersection.append(i)
+    else:
+        differenceA_B.append(i)
+
+for j in setB:
+    if j not in setA:
+        differenceB_A.append(j)
+
+union = setA + differenceB_A
+
+print('Set A:', setA)
+print('Set B:', setB)
+print('Intersection of A and B:', intersection)
+print('Union of A and B:', union)
+print('Difference of A and B:', differenceA_B)
+
 
 
 # End of the file
