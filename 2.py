@@ -14,10 +14,29 @@
 
 # Write your code here
 
+import sys
 
-print('Even Numbers: ')              					 # prints the even numbers (E)
-print('Sum of Even Numbers: ')       					 # prints the sum of even numbers
-print('Even Number Rate: ' + '{0:.3f}'.format())         # prints the sum of even numbers divided by all numbers in the number list (L)
+L = sys.argv[1].split(",")
+E = []
+
+for i in L:
+    i = int(i)
+    if i > 0 and i % 2 == 0:
+        E.append(int(i))
+    else:
+        pass
+
+total = 0
+for i in L:
+    i = int(i)
+    if i > 0:
+        total = total + i
+    else:
+        pass
+
+print('Even Numbers:', E)
+print('Sum of Even Numbers:', sum(E))
+print('Even Number Rate: ' + '{0:.3f}'.format(sum(E) / total))
 
 
 # End of the file
