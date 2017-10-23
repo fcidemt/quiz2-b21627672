@@ -8,11 +8,28 @@
 
 # Write your code here
 
-print('There is one solution')                                       # when discriminant value is equal to z
-print('There are two solutions')                                     # when discriminant value is greater than zero
-print('The solution is not real but complex')                        # when discriminant value is less than zero
+import sys
 
+a = int(sys.argv[1])
+b = int(sys.argv[2])
+c = int(sys.argv[3])
 
-print('Solution(s): ' + '{0:.2f}'.format())                          # if real solution exists
+discriminant = b ** 2 - 4 * a * c
+delta = (b ** 2 - 4 * a * c) ** 0.5
+
+if discriminant > 0:
+    print("There are two solutions")
+    root1 = (-b + delta) / 2 * a
+    root2 = (-b - delta) / 2 * a
+    print('Solution(s): ' + '{0:.2f}'.format(root1), end=" ")
+    print('{0:.2f}'.format(root2))
+
+elif discriminant == 0:
+    print("There is one solution")
+    root = -b / 2 * a
+    print('Solution(s): ' + '{0:.2f}'.format(root))
+
+else:
+    print("The solution is not real but complex")
 
 # End of the file
