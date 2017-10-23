@@ -21,7 +21,7 @@ if discriminant > 0:
     print("There are two solutions")
     root1 = (-b + delta) / 2 * a
     root2 = (-b - delta) / 2 * a
-    print('Solution(s): ' + '{0:.2f}'.format(root1), + '{0:.2f}'.format(root2)
+    print('Solution(s): ' + '{0:.2f}'.format(root1), + ' {0:.2f}'.format(root2)
 
 elif discriminant == 0:
     print("There is one solution")
